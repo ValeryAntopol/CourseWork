@@ -158,7 +158,7 @@ Graphics Processing Units).
         \end{algorithmic}
         \end{algorithm}
     \subsection{Модифицированный алгоритм}
-        Множество ребер графа теперь является подмножеством $V \times N \times V \times \mathbb{R}$ --- у ребер графа появляется вес. Элементами используемой матрицы являются функции такого типа: $a_{i,j}: N\rightarrow\mathbb{R}\cup\{\infty\}$.\\
+        Множество ребер графа теперь является подмножеством $V \times T \times V \times \mathbb{R}$ --- у ребер графа появляется вес. Элементами используемой матрицы являются функции такого типа: $a_{i,j}: N\rightarrow\mathbb{R}\cup\{\infty\}$.\\
         На элементах матрицы водятся следующие операции:
         \begin{equation*}
             (N_1 \times N_2)(A) = \min\{N_1(B) + N_2(C)~|~A \rightarrow BC \in P\}
@@ -166,6 +166,7 @@ Graphics Processing Units).
         \begin{equation*}
             (N_1 + N_2)(A) = \min\{N_1(A), N_2(A)\}
         \end{equation*}
+        Это в точности $(min, +)$-произведение.
         
         \begin{algorithm}[H]
         \begin{algorithmic}[1]
